@@ -1,0 +1,14 @@
+server {
+    client_max_body_size 20M;
+    server_name localhost;  # TODO puppet template variable
+    access_log /var/log/nginx/hodgimoto.access.log;
+    error_log /var/log/nginx/hodgimoto.error.log;
+
+    listen   80 default_server;
+
+    location / {
+        uwsgi_pass unix:///var/run/uwsgi/app/hodgimoto/socket;
+        include uwsgi_params;
+    }
+
+}

@@ -1,0 +1,12 @@
+[uwsgi]
+
+# workers = <%= num_cpus %>
+
+# chdir = /usr/local/apps/hodgimoto
+env = DJANGO_SETTINGS_MODULE=hodgimoto.settings
+module = django.core.handlers.wsgi:WSGIHandler()
+
+vhost = true
+# Don't use python plugin if relying on pip version of uwsgi
+# plugins = python
+virtualenv = /usr/local/venv/hodgimoto
