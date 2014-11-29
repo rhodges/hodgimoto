@@ -12,6 +12,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color:#425242;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -87,4 +88,47 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+a {
+  color: #66adea;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+.text-muted, .footer {
+  color: #bbb;
+}
+
+.main-buttons {
+  margin-bottom: 30px;
+}
+
+.main-buttons > .row{
+  margin: 5px;
+}
+
+.blog-entry-header {
+  background-color: #FAFAFA;
+  border-radius: 4px;
+  border: 1px solid black
+}
+
+.blog-entry-title {
+  color: black;
+}
+
+.blog-entry-content {
+  margin-bottom: 30px;
+}
+
+.blog-daydream {
+  background-color: #FEE;
+  color: #F16;
+  border: solid 1px #F16;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
