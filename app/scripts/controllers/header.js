@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name hodgimotoApp.controller:DemosCtrl
+ * @name hodgimotoApp.controller:HeaderCtrl
  * @description
- * # DemosCtrl
+ * # HeaderCtrl
  * Controller of the hodgimotoApp
  */
 angular.module('hodgimotoApp')
