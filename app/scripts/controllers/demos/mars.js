@@ -16,21 +16,22 @@ angular.module('hodgimotoApp')
 	// function init() {
     $scope.map = new OpenLayers.Map({
       div: 'map',
-      allOverlays: true
+      allOverlays: false
     });
 
-    var osm = new OpenLayers.Layer.OSM();
-    var mars = new OpenLayers.Layer.Google(
-      'G_MARS_VISIBLE_MAP',
-      {visibility: true}
+    // var osm = new OpenLayers.Layer.OSM();
+    var mars = new OpenLayers.Layer.OSM(
+        'Mars',
+        '/images/mars_tiles/Mapnik/${z}/${x}/${y}.png',
+        {numZoomLevels: 9, isBaseLayer: true}
     );
     var gmap = new OpenLayers.Layer.Google(
       'Google Streets',
-      {visibility: false}
+      {visibility: false, isBaseLayer: false}
     );
 
     // note that first layer must be visible
-    $scope.map.addLayers([osm, mars, gmap]);
+    $scope.map.addLayers([mars, gmap]);
 
     $scope.map.addControl(new OpenLayers.Control.LayerSwitcher());
     $scope.map.zoomToMaxExtent();

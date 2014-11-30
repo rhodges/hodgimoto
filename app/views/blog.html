@@ -21,7 +21,7 @@
 						<li>Trying to find a useable Mars base layer</li>
 						<ul>
 							<li><a href="http://googlemapsapi.blogspot.com/2007/12/maps-from-another-world.html" target="_blank">Google no worky</a>.</li>
-							<li>Promising <a href="http://onmars.jpl.nasa.gov/" target="_blank">KML files from NASA</a> but can't seem to get them into QGIS</li>
+							<li>Promising <a href="http://onmars.jpl.nasa.gov/" target="_blank">KML files from NASA</a> but can't seem to get them into <a href="http://www.qgis.org/en/site/" target="_blank">QGIS</li>
 							<li>Found <a href="http://www.mapaplanet.org/explorer/mars.html" target="_blank">a .wld ('world') file here</a>, but also not getting it to play with QGIS.</li>
 							<ul>
 								<li><a href="http://en.wikipedia.org/wiki/World_file" target="_blank">What a World File is</a></li>
@@ -31,8 +31,21 @@
 								<li><a href="http://www.gdal.org/frmt_isis3.html" target="_blank">GDAL (therefore, QGIS) support for it</a></li>
 								<li><a href="http://www.gdal.org/formats_list.html" target="_blank">List of all GDAL supported formats</a></li>
 								<li>Turns out "sweet cube files" are 12 Gb and take a long time to download. Will I even remember what I was doing when this finishes?</li>
+								<li>Cube loads into QGIS great (with patience)! <a href="https://github.com/nextgis/QTiles" target="_blank">Cutting tiles with Qtiles looks like it'll be slow.</li>
+								<ul>
+									<li>11:24.00 PM - Started cutting 5 tiles: layers 0 through 1.</li>
+								</ul>
+							</ul>
+							<li>Even more promising, I found <a href="http://webgis2.wr.usgs.gov/Mars_Global_GIS/" target="_blank">a place where they are pulling existing tiles</a>!</li>
+							<ul>
+								<li><a href="http://dev.openlayers.org/examples/arcgiscache_direct.html" target="_blank">This example</a> looks likely to get me those tiles!</li>
 							</ul>
 						</ul>
+						<li>Also keeping an eye out for fun data layers that I used to know how to find</li>
+						<ul>
+							<li><a href="http://pubs.usgs.gov/sim/3292/" target="_blank">Here are the ones I knew about</a>.</li>
+							<li><a href="http://webgis.wr.usgs.gov/pigwad/links.htm" target="_blank">PIGWAD</a> also looks very rich.</li>
+
 					</ul>
 				</div>
 			</div>
