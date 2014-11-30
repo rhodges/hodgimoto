@@ -5,6 +5,40 @@
 
 			<div class="row blog-entry-header">
 				<div class="col-md-12">
+					<p>Date: November 29, 2014, 1:00 PM PST</p>
+				</div>
+			</div>
+			<div class="row blog-entry-content">
+				<div class="col-md-12">
+					<h3 class="blog-entry-title">
+						Mars? No: Problems! Pt II
+					</h3>
+					<ul>
+						<li>~1:00 PM - OL3 with Google base layer: <a href="http://openlayers.org/en/v3.0.0/examples/google-map.html" target="_blank">This just seems a bit broken for now</a>.</li>
+						<ul>
+							<li>~2:15 PM - For now I see little reason to stick with OL3. It seems it has some maturing to do. I'll do OL2 or Leaflet in the meantime</li>
+						</ul>
+						<li>Trying to find a useable Mars base layer</li>
+						<ul>
+							<li><a href="http://googlemapsapi.blogspot.com/2007/12/maps-from-another-world.html" target="_blank">Google no worky</a>.</li>
+							<li>Promising <a href="http://onmars.jpl.nasa.gov/" target="_blank">KML files from NASA</a> but can't seem to get them into QGIS</li>
+							<li>Found <a href="http://www.mapaplanet.org/explorer/mars.html" target="_blank">a .wld ('world') file here</a>, but also not getting it to play with QGIS.</li>
+							<ul>
+								<li><a href="http://en.wikipedia.org/wiki/World_file" target="_blank">What a World File is</a></li>
+							</ul>
+							<li> Found <a href="http://astrogeology.usgs.gov/search/details/Mars/Viking/MDIM21/Mars_Viking_MDIM21_ClrMosaic_global_232m/cub" target="_blank">this</a> sweet <a href="http://isis.astrogeology.usgs.gov/documents/LogicalCubeFormatGuide/LogicalCubeFormatGuide.html" target="_blank">cube file</a>.</li>
+							<ul>
+								<li><a href="http://www.gdal.org/frmt_isis3.html" target="_blank">GDAL (therefore, QGIS) support for it</a></li>
+								<li><a href="http://www.gdal.org/formats_list.html" target="_blank">List of all GDAL supported formats</a></li>
+								<li>Turns out "sweet cube files" are 12 Gb and take a long time to download. Will I even remember what I was doing when this finishes?</li>
+							</ul>
+						</ul>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row blog-entry-header">
+				<div class="col-md-12">
 					<p>Date: November 28, 2014, 8:48 PM PST</p>
 				</div>
 			</div>
