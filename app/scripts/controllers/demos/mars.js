@@ -17,6 +17,11 @@ angular.module('hodgimotoApp')
       allOverlays: false
     });
 
+    // OpenLayers.Util.onImageLoadError = function() {
+    //     this.src = '/images/mars_tiles/blank.png';
+    // };
+    // OpenLayers.Util.onImageLoadErrorColor = "transparent";
+
     var marsProjection = new OpenLayers.Projection('+proj=longlat +a=3396190 +b=3396190 +no_defs');
     var cubProjection = new OpenLayers.Projection('+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +a=3396190 +b=3396190 +units=m +no_defs');
 
@@ -48,9 +53,22 @@ angular.module('hodgimotoApp')
         eventListeners: landingListeners
       });
 
+    var structureLayer = new OpenLayers.Layer.Vector('Structure', {
+        projection: new OpenLayers.Projection('EPSG:4326'),
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        protocol: new OpenLayers.Protocol.HTTP({
+          url: '/layers/mars_structure.geojson',
+          params: {},
+          format: new OpenLayers.Format.GeoJSON({ignoreExtraDims: true}),
+          callbackKey: 'callback'
+        })
+      });
 
+    $scope.map.addLayers([mars, landingLayer, structureLayer]);
+    structureLayer.setVisibility(false);
 
-    $scope.map.addLayers([mars, landingLayer]);
+    // var extent = mars.getExtent();
+    // $scope.map.setOptions({restrictedExtent: extent});
 
     $scope.map.addControl(new OpenLayers.Control.LayerSwitcher());
     $scope.map.zoomToMaxExtent();
