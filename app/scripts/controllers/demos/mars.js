@@ -27,7 +27,7 @@ angular.module('hodgimotoApp')
 
     var mars = new OpenLayers.Layer.OSM(
         'Mars',
-        '/images/mars_tiles/MarsBase/${z}/${x}/${y}.png',
+        'https://cdn.rawgit.com/rhodges/mars_tiles/master/MarsBase/${z}/${x}/${y}.png',
         {numZoomLevels: 9, isBaseLayer: true, attribution:''}
     );
 
